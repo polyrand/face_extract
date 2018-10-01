@@ -1,7 +1,8 @@
 # Face Extractor
 > Extract faces from images inside a folder.
 
-One to two paragraph statement about your product and what it does.
+CLI utility to extract faces from an image or a folder. Mostly based on the awesome
+[article][dl_article] by [Adrian Rosebrock][pyimagesearch].
 
 ## Installation
 
@@ -10,68 +11,47 @@ OS X & Linux:
 Clone the repository and run:
 
 ```sh
-git clone https://github.com/rickaa/setDNS.git
-chmod +x setdns.py
-./setdns.py
+git clone https://github.com/rickaa/face_extract.git
+chmod +x face_extract.py
 ```
 
-
-Windows:
-
-```sh
-edit autoexec.bat
-```
 
 ## Usage example
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
-_For more examples and usage, please refer to the [Wiki][wiki]._
-
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
+**Place the images you want to extract faces from in the `input` folder**
 
 ```sh
-make install
-npm test
+./face_extract.py -f ./input/ -p deploy.prototxt.txt -m res10_300x300_ssd_iter_140000.caffemodel
 ```
+
+**Detect faces in image `test1.jpg` but without extracting them**
+
+```sh
+./face_extract.py -i ./input/test1.jpg -p deploy.prototxt.txt -m res10_300x300_ssd_iter_140000.caffemodel
+```
+
+## Inner workings
+
+The file `test_face.py`is meant to be run with a kernel so that you can see step by step what is going on
+in a clearer way than just looking at the `for` loop in the main script.
 
 ## Release History
 
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
 * 0.1.0
     * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
-* 0.0.1
-    * Work in progress
+
 
 ## Meta
-
-Your Name – [@YourTwitter](https://twitter.com/) – YourEmail@example.com
-
-Distributed under the XYZ license. See ``LICENSE`` for more information.
 
 [https://github.com/rickaa/](https://github.com/rickaa/)
 
 ## Contributing
 
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
+1. Fork it (<https://github.com/rickaa/face_extract/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
 
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
+[dl_article]: https://www.pyimagesearch.com/2018/02/26/face-detection-with-opencv-and-deep-learning/
+[pyimagesearch]: https://www.pyimagesearch.com/
