@@ -14,7 +14,17 @@ Clone the repository and run:
 git clone https://github.com/rickaa/face_extract.git
 chmod +x face_extract.py
 ```
+Install dependecies if needed:
 
+```sh
+pip install numpy
+pip install opencv-contrib-python
+```
+If you want to run the `test_face.py` file:
+
+```sh
+pip install matplotlib
+```
 
 ## Usage example
 
@@ -33,7 +43,8 @@ chmod +x face_extract.py
 ## Inner workings
 
 The file `test_face.py`is meant to be run with a kernel so that you can see step by step what is going on
-in a clearer way than just looking at the `for` loop in the main script.
+in a clearer way than just looking at the `for` loop in the main script. In order to work
+with it place a file called `test.jpg` in the input folder.
 
 For example:
 
@@ -47,7 +58,9 @@ For example:
 
 ## Meta
 
-[https://github.com/rickaa/](https://github.com/rickaa/)
+[https://github.com/rickaa/](https://github.com/rickaa/)  
+
+[https://www.linkedin.com/in/ricardoanderegg/](https://www.linkedin.com/in/ricardoanderegg/)
 
 ## Contributing
 
