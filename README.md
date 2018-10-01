@@ -35,6 +35,10 @@ chmod +x face_extract.py
 The file `test_face.py`is meant to be run with a kernel so that you can see step by step what is going on
 in a clearer way than just looking at the `for` loop in the main script.
 
+For example:
+
+![](inner.png)
+
 ## Release History
 
 * 0.1.0
