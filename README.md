@@ -20,6 +20,13 @@ Install dependecies if needed:
 pip install numpy
 pip install opencv-contrib-python
 ```
+
+If you use [**Pipenv**](https://pipenv.readthedocs.io/en/latest/) for virtual environments management and have OpenCV installed with
+HomeBrew you can do:
+
+```sh
+ln -s "$(brew --prefix)"/lib/python3.7/site-packages/cv2*.so "$(pipenv --venv)"/lib/python3.7/site-packages
+```
 If you want to run the `test_face.py` file:
 
 ```sh
