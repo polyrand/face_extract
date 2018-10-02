@@ -51,10 +51,11 @@ def detect_image(image_path, save_crop=False):
                 cv2.putText(image, text, (startX, y), cv2.FONT_HERSHEY_SIMPLEX,
                     0.45, (0, 0, 255), 2)
 
-    # show output image
-    cv2.namedWindow('image', cv2.WINDOW_NORMAL)
-    cv2.imshow('Output', cv2.resize(image, (600, 600)))
-    cv2.waitKey(0)
+                # show output image
+                cv2.namedWindow('image', cv2.WINDOW_NORMAL)
+                cv2.imshow('Output', cv2.resize(image, (600, 600)))
+                cv2.waitKey(0)
+                break
 
 
 def detect_folder(folder):
